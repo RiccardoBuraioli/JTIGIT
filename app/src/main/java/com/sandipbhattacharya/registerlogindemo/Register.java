@@ -23,10 +23,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Register extends AppCompatActivity {
-    private EditText etName, etEmail, etPassword, etReenterPassword;
+    private EditText etName, etEmail, etPassword, etReenterPassword, etCognome;
     private TextView tvStatus;
     private Button btnRegister;
-    private String URL = "http://192.168.1.10/api/register.php";
     private String name, email, password, reenterPassword;
 
     @Override
@@ -34,6 +33,7 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register);
         etName = findViewById(R.id.etName);
+        etCognome = findViewById(R.id.cognome);
         etEmail = findViewById(R.id.etEmail);
         etPassword = findViewById(R.id.etPassword);
         etReenterPassword = findViewById(R.id.etReenterPassword);
@@ -44,13 +44,24 @@ public class Register extends AppCompatActivity {
 
 
     public void mapInformation(View view){
-        Intent intent = new Intent(this, MapsActivityInformation.class);
-        startActivity(intent);
-        finish();
+        if(password.equals(reenterPassword) && !etName.getText().toString().trim().equals("")){
+            Intent intent = new Intent(this, MapsActivityInformation.class);
+            intent.putExtra("name",etName.getText().toString().trim());
+            intent.putExtra("email",etEmail.getText().toString().trim());
+            intent.putExtra("password",etPassword.getText().toString().trim());
+            intent.putExtra("cognome", etCognome.getText().toString().trim());
+            intent.putExtra("tipo", "Volontario");
+            startActivity(intent);
+            finish();
+        }else{
+            Toast.makeText(this, "Password Mismatch", Toast.LENGTH_SHORT).show();
+
+        }
+
     }
 
 
-    public void save(View view) {
+   /* public void save(View view) {
         name = etName.getText().toString().trim();
         email = etEmail.getText().toString().trim();
         password = etPassword.getText().toString().trim();
@@ -86,7 +97,7 @@ public class Register extends AppCompatActivity {
             RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
             requestQueue.add(stringRequest);
         }
-    }
+    }*/
 
     public void login(View view) {
         Intent intent = new Intent(this, MainActivity.class);

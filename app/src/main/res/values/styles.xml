@@ -10,6 +10,7 @@
         <item name="windowActionBar">false</item>
     </style>
 
+
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -23,14 +24,14 @@
 
     <style name="loginParent" parent="parent">
         <item name="android:layout_height">match_parent</item>
-        <item name="android:background">@color/loginBkColor</item>
+        <item name="android:background">@color/purple_500</item>
         <item name="android:focusableInTouchMode">true</item>
     </style>
 
     <style name="headerText" parent="parent">
-        <item name="android:textSize">@dimen/headerTextSize</item>
+        <item name="android:textSize">12dp</item>
         <item name="android:textAlignment">center</item>
-        <item name="android:textColor">@color/whiteTextColor</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
         <item name="android:textStyle">bold</item>
     </style>
 
@@ -45,7 +46,7 @@
     </style>
 
     <style name="modifiedEditText" parent="parent">
-        <item name="android:textSize">@dimen/newsMoreTextSize</item>
+        <item name="android:textSize">12dp</item>
         <item name="android:backgroundTint">@color/primaryTextColor</item>
     </style>
 
@@ -55,9 +56,11 @@
     </style>
 
     <style name="loginButton" parent="viewParent">
-        <item name="android:background">@drawable/login_button_bk</item>
-        <item name="android:textColor">@color/whiteTextColor</item>
+        <item name="android:background">@drawable/ic_launcher_background</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
         <item name="android:textStyle">bold</item>
     </style>
+
+    <style name="AppTheme">AppTheme</style>
 
 </resources>

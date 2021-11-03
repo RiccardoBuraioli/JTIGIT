@@ -11,7 +11,7 @@
         android:id="@+id/map"
         class="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="285dp" />
+        android:layout_height="247dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -23,6 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
             android:layout_marginBottom="44dp"
+            android:onClick="save"
             android:text="Salta"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -36,7 +37,7 @@
             android:text="Salva"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/indirizzo" />
+            app:layout_constraintStart_toEndOf="@+id/indirizzoText" />
 
         <TextView
             android:id="@+id/IndirizzoT"
@@ -44,12 +45,12 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
             android:text="Indirizzo"
-            app:layout_constraintBottom_toTopOf="@+id/indirizzo"
+            app:layout_constraintBottom_toTopOf="@+id/indirizzoText"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="16dp" />
 
         <EditText
-            android:id="@+id/indirizzo"
+            android:id="@+id/indirizzoText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -61,12 +62,38 @@
 
         <TextView
             android:id="@+id/descr"
-            android:layout_width="405dp"
-            android:layout_height="48dp"
+            android:layout_width="387dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="4dp"
             android:text="* Se vuoi che le tue donazioni vengano prese in un luogo specifico salvalo nella mappa e le caritas potranno vederlo!"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="3dp" />
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/latitudine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="latitudine"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="156dp" />
+
+        <TextView
+            android:id="@+id/longitudine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="180dp"
+            android:text="longitudine"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="101dp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="La tue Coordinate"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="101dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

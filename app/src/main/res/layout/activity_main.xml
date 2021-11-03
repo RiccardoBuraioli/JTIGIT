@@ -15,8 +15,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="testo"
-        app:startIconDrawable="@drawable/ic_favorite_24dp"
-        app:startIconContentDescription="@string/content_description_end_icon"
+        app:startIconDrawable="@drawable/ic_launcher_foreground"
+        app:startIconContentDescription="@string/title_activity_maps_information"
         app:endIconMode="password_toggle"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
